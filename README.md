@@ -1,72 +1,73 @@
 # Encrypter & Decrypter
 
-Este projeto consiste em dois scripts Python para criptografar e descriptografar arquivos de texto utilizando o algoritmo AES no modo CTR. É ideal para quem deseja entender como criptografar arquivos de forma simples, implementando suas próprias chaves de criptografia.
+This project consists of two Python scripts for encrypting and decrypting text files using the AES algorithm in CTR mode. It is ideal for those who want to understand how to encrypt files simply by implementing their own encryption keys.
 
-## 🚀 Funcionalidade
+## 🚀 Functionality
 
-**Encrypter (encrypter.py)**: Criptografa arquivos .txt no diretório atual, gerando uma versão criptografada com a extensão .txt.ransomware.
+**Encrypter (encrypter.py):** Encrypts `.txt` files in the current directory, generating an encrypted version with the `.txt.ransomware` extension.
 
-**Decrypter (decrypter.py)**: Descriptografa arquivos .txt.ransomware, restaurando os arquivos originais.
+**Decrypter (decrypter.py):** Decrypts `.txt.ransomware` files, restoring the original files.
 
-## 🔐 Como Funciona
+## 🔐 How It Works
 
-Ambos os scripts utilizam o algoritmo AES com a chave fixa `testeransomwares` no modo CTR.
+Both scripts use the AES algorithm with the fixed key `testeransomwares` in CTR mode.
 
-- O **encrypter** lê arquivos .txt, criptografa seu conteúdo, salva como um novo arquivo .ransomware e exclui o arquivo original.
-- O **decrypter** lê arquivos .ransomware, descriptografa e restaura os arquivos para o formato .txt.
+- The **encrypter** reads `.txt` files, encrypts their content, saves them as a new `.ransomware` file, and deletes the original file.
+- The **decrypter** reads `.ransomware` files, decrypts them, and restores the files to `.txt` format.
 
-## 📝 Geração de Arquivos de Teste: `cria_txt.py`
-O script `cria_txt.py` tem como objetivo criar automaticamente arquivos de texto de teste no diretório atual, preenchidos com conteúdo genérico, para serem utilizados nos testes de encriptação e decriptação. Ele facilita a validação do funcionamento dos scripts `encrypter.py` e `decrypter.py`, gerando arquivos `.txt` que podem ser criptografados e, em seguida, descriptografados.
+## 📝 Test File Generation: `create_txt.py`
 
-### Como Funciona:
-1. **Geração de Arquivos de Teste**: O script cria uma série de arquivos de texto, como `senhas.txt`, `contas_bancarias.txt`, entre outros, preenchidos com dados fictícios.
-2. **Uso no Fluxo de Testes**: Após executar o script, você terá arquivos que podem ser utilizados como entrada para o processo de criptografia (`encrypter.py`) e, posteriormente, para a descriptografia (`decrypter.py`).
+The `create_txt.py` script is designed to automatically generate test text files in the current directory, filled with generic content, for use in encryption and decryption tests. It simplifies validating the functionality of the `encrypter.py` and `decrypter.py` scripts by creating `.txt` files that can be encrypted and later decrypted.
 
-## 🚀 Como Rodar
+### How It Works:
+1. **Test File Generation:** The script creates a series of text files, such as `passwords.txt`, `bank_accounts.txt`, and more, filled with fictional data.
+2. **Usage in Test Flow:** After running the script, you will have files that can be used as input for the encryption process (`encrypter.py`) and later for decryption (`decrypter.py`).
 
-### Pré-requisitos:
+## 🚀 How to Run
+
+### Prerequisites:
 - Python 3.x
-- Biblioteca `pyaes`
+- `pyaes` library
 
-### Passos para rodar:
+### Steps to Run:
 
-1. Clone este repositório:
+1. Clone this repository:
 
     ```bash
-    git clone https://github.com/usuario/nome-do-repositorio.git
+    git clone https://github.com/user/repository-name.git
     ```
 
-2. Instale a dependência `pyaes`:
+2. Install the `pyaes` dependency:
 
     ```bash
     pip install pyaes
     ```
 
-3. Execute os scripts:
+3. Run the scripts:
 
-    Para criptografar os arquivos de teste:
+    To encrypt the test files:
 
     ```bash
     python encrypter.py
     ```
 
-    Para descriptografar os arquivos:
+    To decrypt the files:
 
     ```bash
     python decrypter.py
     ```
 
-Os arquivos de teste serão criados automaticamente pelo script `test_files` em .txt. Depois de rodar o `encrypter.py`, os arquivos criptografados terão a extensão `.txt.ransomware` e poderão ser restaurados com o `decrypter.py`.
+The test files will be automatically created by the `create_txt.py` script in `.txt` format. After running `encrypter.py`, the encrypted files will have the `.txt.ransomware` extension and can be restored using `decrypter.py`.
 
-## 🛠️ Tecnologias
+## 🛠️ Technologies
 
-- **Python 3.x**: Linguagem de programação utilizada para desenvolver o projeto.
-- **pyaes**: Biblioteca Python para criptografia AES.
+- **Python 3.x:** Programming language used to develop the project.
+- **pyaes:** Python library for AES encryption.
 
-## 📚 Projeto do Santander Cibersegurança Bootcamp
+## 📚 Project from Santander Cybersecurity Bootcamp
 
-Este projeto foi desenvolvido como parte do curso **Santander Cibersegurança Bootcamp**, com o objetivo de aplicar conceitos de criptografia e segurança em arquivos de forma prática.
+This project was developed as part of the **Santander Cybersecurity Bootcamp** course, aiming to apply concepts of cryptography and file security in a practical way.
 
-## ⚠️ Aviso Importante
+## ⚠️ Important Notice
 
-Este é um código de exemplo de como criptografar e descriptografar arquivos, não é recomendado para uso em produção sem validações adicionais de segurança e gerenciamento de chaves. O uso desse tipo de criptografia em dados sensíveis deve ser feito com precaução e com o uso de boas práticas de segurança.
+This is sample code for encrypting and decrypting files. It is **not recommended for production use** without additional security validations and key management. The use of this type of encryption on sensitive data should be done with caution and adherence to best security practices.
