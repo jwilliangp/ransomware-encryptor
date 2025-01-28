@@ -15,6 +15,13 @@ Ambos os scripts utilizam o algoritmo AES com a chave fixa `testeransomwares` no
 - O **encrypter** lê arquivos .txt, criptografa seu conteúdo, salva como um novo arquivo .ransomware e exclui o arquivo original.
 - O **decrypter** lê arquivos .ransomware, descriptografa e restaura os arquivos para o formato .txt.
 
+## 📝 Geração de Arquivos de Teste: `cria_txt.py`
+O script `cria_txt.py` tem como objetivo criar automaticamente arquivos de texto de teste no diretório atual, preenchidos com conteúdo genérico, para serem utilizados nos testes de encriptação e decriptação. Ele facilita a validação do funcionamento dos scripts `encrypter.py` e `decrypter.py`, gerando arquivos `.txt` que podem ser criptografados e, em seguida, descriptografados.
+
+### Como Funciona:
+1. **Geração de Arquivos de Teste**: O script cria uma série de arquivos de texto, como `senhas.txt`, `contas_bancarias.txt`, entre outros, preenchidos com dados fictícios.
+2. **Uso no Fluxo de Testes**: Após executar o script, você terá arquivos que podem ser utilizados como entrada para o processo de criptografia (`encrypter.py`) e, posteriormente, para a descriptografia (`decrypter.py`).
+
 ## 🚀 Como Rodar
 
 ### Pré-requisitos:
