@@ -34,7 +34,7 @@ The `create_txt.py` script is designed to automatically generate test text files
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/user/repository-name.git
+    git clone https://github.com/jwilliangp/repository-name.git
     ```
 
 2. Install the `pyaes` dependency:
